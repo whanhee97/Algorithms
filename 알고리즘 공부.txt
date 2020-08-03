@@ -1,0 +1,31 @@
+코드업 기초 100제
+백준
+
+기본 역량
+그리디 알고리즘
+탐색 - 완전탐색 BFS, DFS
+기본 동적프로그래밍
+
+그 외
+그래프 이론
+중급 및 고급 동적 프로그래밍
+문자열
+
+코드포스 블루레벨
+삼성 역량 테스트 B형
+백준 - 삼성, 카카오 기출문제 
+프로그래머스
+
+SI - 앱을 만드는 회사
+SM - 앱을 유지 보수 하는 회사
+LG CNS
+현대 오토에버
+IBK 시스템
+KCC정보통신
+
+파이썬 정수 여러개 입력받기
+import sys
+n = int(input())
+# p = [sys.stdin.readline() for _ in range(n)] // 여러개 라인 입력받을때
+p = list(map(int, sys.stdin.readline().split())) // 업그레이드 버전
+#p =  list(map(int, input().split())) // 기존
