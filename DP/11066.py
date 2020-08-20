@@ -1,4 +1,4 @@
-#백준 11066 - 파일 합치기
+#백준 11066 - 파일 합치기 // 행렬 곱셈 순서(11049)랑 똑같은 유형 - 둘 다 잘 보기
 import sys
 import math
 input = sys.stdin.readline
