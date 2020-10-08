@@ -1,6 +1,8 @@
 #백준 1520 - 내리막 길
 import sys
 input = sys.stdin.readline
+sys.setrecursionlimit(10000)
+
 n, m = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in  range(n)]
 dx = [1,0,-1,0] # 4방향 이동위해 x가 1일 경우 y는 0
