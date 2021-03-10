@@ -20,7 +20,6 @@
 프로그래머스
 
 
-
 파이썬 정수 여러개 입력받기
 import sys
 n = int(input())
