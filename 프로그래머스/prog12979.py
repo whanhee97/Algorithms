@@ -11,7 +11,7 @@ def solution(n, stations, w):
         # left - start는 전파 범위에 안들어 가는 구간이고 1+2*w는 송신탑 하나의 최대범위임
         answer += ceil((left - start) / (1+2*w))
         start = s+w
-    answer += ceil((n - start) / (1+2*w))
+    answer += ceil((n - start) / (1+2*w))  # 마지막 스타트에서 끝까지 구간
     return answer
 
 
