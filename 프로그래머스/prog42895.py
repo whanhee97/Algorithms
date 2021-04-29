@@ -3,6 +3,8 @@
 
 def solution(N, number):
     answer = -1
+    if number == N:
+        return 1
     s = [set() for _ in range(8)]  # s[n] 은 n+1개로 만들 수 있는 수의 집합
     for i in range(8):
         temp = int(str(N)*(i+1))
