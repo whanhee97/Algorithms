@@ -6,13 +6,14 @@ import heapq
 def solution(scoville, K):
     answer = 0
     scoville.sort()
+    heapq.heapify(scoville)
     while 1:
         if scoville[0] >= K:
             return answer
         if len(scoville) == 1:
             break
-        first = scoville.pop(0)
-        second = scoville.pop(0)
+        first = heapq.heappop(scoville)
+        second = heapq.heappop(scoville)
         heapq.heappush(scoville, (first + second*2))
         answer += 1
 
