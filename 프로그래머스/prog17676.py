@@ -1,13 +1,6 @@
 # 프로그래머스 - 추석 트래픽
 # https://programmers.co.kr/learn/courses/30/lessons/17676
 
-def is_include(start, line):
-    if line[0] > round(start+0.999, 3) or line[1] < start:
-        return False
-    else:
-        return True
-
-
 def solution(lines):
     answer = 0
     startNfinish = []
@@ -24,8 +17,9 @@ def solution(lines):
             cnt = 0
             start = startNfinish[i][j]
             for k in startNfinish:
-                if is_include(start, k):
-                    cnt += 1
+                if k[0] > round(start+0.999, 3) or k[1] < start:
+                    continue
+                cnt += 1
             if answer <= cnt:
                 answer = cnt
     return answer
