@@ -1,3 +1,6 @@
+# 프로그래머스 동적계획법 - 등굣길
+# https://programmers.co.kr/learn/courses/30/lessons/42898
+
 def solution(m, n, puddles):
     answer = 0
     dp = [[1 for _ in range(m)] for _ in range(n)]  # 일단 1로 초기화
