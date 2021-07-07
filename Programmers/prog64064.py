@@ -24,8 +24,9 @@ def solution(user_id, banned_id):
         if not check(users, banned_id):
             continue
         else:
+            users = set(users)
             if users not in banned_set:
-                banned_set.append(set(users))
+                banned_set.append(users)
 
     return len(banned_set)
 
