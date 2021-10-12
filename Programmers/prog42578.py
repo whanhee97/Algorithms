@@ -7,8 +7,7 @@ def solution(clothes):
         c_dict[c[1]].append(c[0])
     for k in c_dict.keys():
         answer *= (len(c_dict[k])+1)
-    print(answer)
-    return answer
+    return answer-1
 
 
 clothes = [["yellowhat", "headgear"], [
