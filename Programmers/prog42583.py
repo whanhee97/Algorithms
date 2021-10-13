@@ -4,25 +4,25 @@
 from collections import deque
 
 
-def shift_left(bridge):
-    for i in range(1, len(bridge)):
-        bridge[i-1] = bridge[i]
-
-    bridge[-1] = 0
-
-
 def solution(bridge_length, weight, truck_weights):
     answer = 0
     truck_weights = deque(truck_weights)
     bridge = [0]*bridge_length
+    bridge = deque(bridge)
+    bridge_weight = 0
     while truck_weights:
-        shift_left(bridge)
+        truck_out = bridge.popleft()
+        bridge.append(0)
+        bridge_weight -= truck_out
         answer += 1
-        if sum(bridge) + truck_weights[0] <= weight:
-            bridge[-1] = truck_weights.popleft()
+        if bridge_weight + truck_weights[0] <= weight:
+            truck_in = truck_weights.popleft()
+            bridge[-1] = truck_in
+            bridge_weight += truck_in
     while 1:
-        if sum(bridge) != 0:
-            shift_left(bridge)
+        if bridge_weight != 0:
+            bridge_weight -= bridge.popleft()
+            bridge.append(0)
             answer += 1
         else:
             break
