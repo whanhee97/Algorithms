@@ -16,8 +16,8 @@ wes = 3
 sou = 4
 acr = 5
 
-dx = [1,-1,0,0]
-dy = [0,0,-1,1]
+dx = [0,0,-1,1]
+dy = [1,-1,0,0]
 
 def move(x,y,dir):
   nx, ny = x, y
@@ -29,8 +29,8 @@ def move(x,y,dir):
   global acr
 
   flag = False
-  if nx+dx[dir-1] >= 0 and nx+dx[dir-1] < m:
-    if ny+dy[dir-1] >= 0 and ny+dy[dir-1] < n:
+  if nx+dx[dir-1] >= 0 and nx+dx[dir-1] < n:
+    if ny+dy[dir-1] >= 0 and ny+dy[dir-1] < m:
       nx += dx[dir-1]
       ny += dy[dir-1]
       flag = True
@@ -60,11 +60,11 @@ def move(x,y,dir):
       sou= acr
       acr = nor
       nor = tmp
-    if Map[ny][nx] != 0:
-      dice[bot] = Map[ny][nx]    
-      Map[ny][nx] = 0
+    if Map[nx][ny] != 0:
+      dice[bot] = Map[nx][ny]    
+      Map[nx][ny] = 0
     else:
-      Map[ny][nx] = dice[bot]
+      Map[nx][ny] = dice[bot]
     print(dice[acr])
   return (nx,ny)  
   
