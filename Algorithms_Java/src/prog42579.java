@@ -15,7 +15,7 @@ class Music implements Comparable<Music>{
     }
 }
 
-class Solution {
+class prog42579 {
     public int[] solution(String[] genres, int[] plays) {
 
         Map<String,Integer> total = new HashMap<>(); // 장르별 총 플레이수 저장
