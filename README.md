@@ -335,6 +335,7 @@ priorityQueueLowest.clear();
 - Map<Character,Integer> hm = new HashMap<>();
 - hm.put(k,v), hm.remove(k);
 - 키값이 있는지 확인하면서 집어 넣기
+
   ```java
   for(int i=0;i<s2.length()-1;i++){
   	hm.put(키,hm.getOrDefault(키,0)+1);
@@ -343,6 +344,7 @@ priorityQueueLowest.clear();
   // hm.getOrDefault(키,0) -> 키에 해당하는 값을 가져오거나 0으로 초기화
 
   ```
+
 - hashMap for문
 
 ```java
@@ -367,6 +369,48 @@ Collections.sort(entryList, (a,b)-> hm.get(b.getKey()) - hm.get(a.getKey()));
 ## DP - 배낭 알고리즘
 
 https://sskl660.tistory.com/88
+
+## Kruskal 알고리즘 - 가중치가 있어야만 동작
+
+> https://school.programmers.co.kr/learn/courses/30/lessons/42861?language=java#
+
+```java
+costs : [[0,1,1],[0,2,2],[1,2,5],[1,3,1],[2,3,8]] // [왼쪽노드, 오른쪽노드, 가중치]
+
+static int[] parents;
+public static int findParent(int target){
+    if(parents[target] == target) return target; //재귀 돌다가 같아지면 리턴
+    else{
+        target = findParent(parents[target]); //같아지는거 찾을때 까지 재귀돌기
+        return target;
+    }
+}
+public static boolean union(int a, int b){
+    a = findParent(a); // 부모 찾고
+    b = findParent(b); // 부모 찾고
+    if(a != b){ // 부모가 다르면
+        parents[b] = a; //b의 부모를 a로 (간선 이거주기)
+        return true; //이어주면 true
+    }
+    return false; // 부모가 같으면 안 이어줘도 되므로 false
+}
+
+public int solution(int n, int[][] costs) {
+    int answer = 0;
+    int size = costs.length;
+    parents = new int[n];
+    Arrays.sort(costs, (a,b)->a[2]-b[2]);
+    for(int i=0;i<n;i++){
+        parents[i] = i; // 각각의 부모를 자기 자신으로 (아무것도 안 이어져있는 상태)
+    }
+
+    for(int[] cost:costs){
+        if(union(cost[0],cost[1])) answer += cost[2]; // 안 이어져있다면 이어주고 비용 더해주기
+    }
+
+    return answer;
+}
+```
 
 # SQL 코테 대비
 
