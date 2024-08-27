@@ -468,7 +468,7 @@ WHERE X.RANK_A = 1
 
 ## DATE_FORMAT
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/11897807-d7e2-4357-940e-e4f62e2e2827/c767c726-cd7f-441d-bee2-f592b306f16d/image.png)
+![image](https://github.com/user-attachments/assets/e3dea2f2-ef11-45c8-963b-e244e30ef471)
 
 - DIFFERENTIATION_DATE = ‘2024-08-24’ 일때
   - DATE_FORMAT(DIFFERENTIATION_DATE, ‘%Y’) → 2024
