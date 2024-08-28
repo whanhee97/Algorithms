@@ -12,8 +12,16 @@ public class Main {
 
 
     public static void main(String[] args) {
-        test1 T = new test1();
-        int[][] ip = {{1000, 1}, {0, 10}};
-        System.out.print(T.solution(ip,2000));
+        Scanner kb = new Scanner(System.in);
+        int n = kb.nextInt();
+        int[][] arr = new int[n][2];
+        for(int i =0;i<n;i++){
+            arr[i][0] = kb.nextInt();
+            arr[i][1] = kb.nextInt();
+        }
+
+        inf_9_4 T = new inf_9_4();
+
+        System.out.print(T.solution(n,arr));
     }
 }
