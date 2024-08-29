@@ -6,8 +6,8 @@ public class inf_9_6 {
         if(parents[t] == t){
             return t;
         }else{
-            int parent = find(parents[t]);
-            return parent;
+            parents[t] = find(parents[t]);
+            return parents[t];
         }
     }
 
