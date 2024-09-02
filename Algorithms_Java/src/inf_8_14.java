@@ -34,29 +34,4 @@ public class inf_8_14 {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in);
-
-        n = kb.nextInt();
-        m = kb.nextInt();
-
-        pizzas = new ArrayList<>();
-        houses = new ArrayList<>();
-        answer = 1000;
-
-        board = new int[n][n];
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                board[i][j] = kb.nextInt();
-                if(board[i][j] == 1){
-                    houses.add(new Integer[] {i,j});
-                }else if(board[i][j] == 2){
-                    pizzas.add(new Integer[] {i,j});
-                }
-            }
-        }
-        combi = new int[pizzas.size()];
-        dfs(0,0);
-        System.out.print(answer);
-    }
 }

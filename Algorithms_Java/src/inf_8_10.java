@@ -22,18 +22,5 @@ public class inf_8_10 {
             }
         }
     }
-    public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in);
-        board = new int[7][7];
-        answer = 0;
-        for(int i=0;i<7;i++){
-            for(int j=0;j<7;j++){
-                board[i][j] = kb.nextInt();
-            }
-        }
-        board[0][0] = 1;
 
-        dfs(0,0);
-        System.out.print(answer);
-    }
 }
