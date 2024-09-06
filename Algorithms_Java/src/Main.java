@@ -13,20 +13,11 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
-        int v = kb.nextInt();
-        int e = kb.nextInt();
+        int n = kb.nextInt();
 
-        List<Road> roadList = new ArrayList<>();
-        for(int i =0;i<e;i++){
-            int a = kb.nextInt();
-            int b = kb.nextInt();
-            int cost = kb.nextInt();
+        
+        inf_10_1 T = new inf_10_1();
 
-            roadList.add(new Road(a,b,cost));
-        }
-
-        inf_9_7 T = new inf_9_7();
-
-        System.out.print(T.solution2(v,e,roadList));
+        System.out.print(T.solution(n));
     }
 }
