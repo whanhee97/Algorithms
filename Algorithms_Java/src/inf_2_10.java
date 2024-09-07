@@ -19,7 +19,7 @@ public class inf_2_10 {
         return answer;
     }
 
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
         int[][] arr = new int[n][n];
@@ -28,9 +28,9 @@ public class inf_2_10 {
                 arr[i][j]=kb.nextInt();
             }
         }
-        /*for(int x : solution(n, arr)){
+        *//*for(int x : solution(n, arr)){
             System.out.print(x + " ");
-        }*/
+        }*//*
         System.out.print(solution(n, arr));
-    }
+    }*/
 }
