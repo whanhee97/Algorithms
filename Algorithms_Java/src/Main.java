@@ -14,10 +14,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
-
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = kb.nextInt();
+        }
         
-        inf_10_1 T = new inf_10_1();
+        inf_10_3 T = new inf_10_3();
 
-        System.out.print(T.solution(n));
+        System.out.print(T.solution(n,arr));
     }
 }
