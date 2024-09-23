@@ -18,9 +18,10 @@ public class Main {
         for(int i=0;i<n;i++){
             arr[i] = kb.nextInt();
         }
+        int m = kb.nextInt();
         
-        inf_10_3 T = new inf_10_3();
+        inf_10_5 T = new inf_10_5();
 
-        System.out.print(T.solution(n,arr));
+        System.out.print(T.solution2(m,arr));
     }
 }
