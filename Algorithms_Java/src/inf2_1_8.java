@@ -8,7 +8,7 @@ public class inf2_1_8 {
         for(int e: enter){
             room.add(e); //방에 집어넣고
             answer[e-1] = room.size()-1; //집어 넣은 사람의 카운트를 방에있는 사람수(자기 제외)로 초기화
-            for(int x : room){ // 방에 있는 사람들 자기 제외하고 count 1씩 늘려줌
+            for(int x : room){ // 방에 있는 사람들 자기 제외하고 count 1씩 늘려줌 -> 새로 들어온 사람 본거니까
                 if(x!=e){
                     answer[x-1] += 1;
                 }
