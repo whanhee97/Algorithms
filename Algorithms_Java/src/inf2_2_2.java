@@ -23,6 +23,7 @@ public class inf2_2_2 {
             int val = e.getValue();
             answer[idx] = max - val;
             idx++;
+
         }
 
         return answer;
