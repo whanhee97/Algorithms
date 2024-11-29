@@ -3,7 +3,7 @@ public class inf2_3_3 {
     public int[] solution(int[] arrival, int[] state){
         int n = arrival.length;
         int[] answer = new int[n];
-
+        //
         Queue<Integer> enter = new LinkedList<>();
         Queue<Integer> exit = new LinkedList<>();
         int t = 0;
